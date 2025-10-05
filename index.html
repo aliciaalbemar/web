@@ -4,241 +4,259 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alicia Albendín Martínez – Psicología Infantil y Familiar</title>
-  <link rel="icon" type="image/png" href="images/logo.png">
   <meta name="description" content="Psicología infantil y juvenil. Terapia con niños, padres y familias. Reserva tu primera cita a precio reducido." />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Estilos mínimos del popup -->
-  <style>
-    body.no-scroll{overflow:hidden}
-    .cookie-backdrop,.cookie-modal{display:none}
-    .cookie-backdrop{
-      position:fixed;inset:0;background:rgba(17,24,39,.55);
-      backdrop-filter:blur(2px);z-index:60;
-    }
-    .cookie-modal{position:fixed;inset:0;display:grid;place-items:center;z-index:70;}
-    .cookie-content{
-      width:min(680px,92vw);background:#fff;border:1px solid #eef0f6;
-      border-radius:18px;box-shadow:0 6px 24px rgba(16,24,40,.08);padding:22px;
-      color:#1f2937;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif
-    }
-    .cookie-content h3{margin:0 0 8px;font-size:20px}
-    .cookie-content p{margin:0 0 14px;color:#6b7280}
-    .cookie-content a{color:#7c3aed}
-    .cookie-actions{display:flex;justify-content:flex-end;margin-top:12px}
-    .cookie-actions .btn{padding:12px 16px;border-radius:12px;border:1px solid #e6e7ee;background:#7c3aed;color:#fff;cursor:pointer}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <img src="images/logo.png" alt="Logo Alicia" width="40" height="40"/>
-        <div>
-          <b>Alicia Albendín</b><div class="subtitle">Psicología Infantil y Familiar</div>
-        </div>
-      </div>
-      <nav aria-label="Principal">
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#opiniones">Opiniones</a></li>
-          <li><a href="#precios">Precios</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </nav>
-      <!-- 🔽 cambiado -->
-      <a class="cta" href="reservar.html">Reservar cita</a>
-      <button class="menu-btn" aria-label="Abrir menú" onclick="toggleMenu()">☰</button>
-    </div>
-    <div class="mobile-menu" role="dialog" aria-label="Menú móvil">
-      <a href="#inicio" onclick="toggleMenu()">Inicio</a>
-      <a href="#sobre-mi" onclick="toggleMenu()">Sobre mí</a>
-      <a href="#servicios" onclick="toggleMenu()">Servicios</a>
-      <a href="#opiniones" onclick="toggleMenu()">Opiniones</a>
-      <a href="#precios" onclick="toggleMenu()">Precios</a>
-      <a href="#faq" onclick="toggleMenu()">FAQ</a>
-      <!-- 🔽 cambiado -->
-      <a href="reservar.html" class="cta" style="margin:12px" onclick="toggleMenu()">Reservar cita</a>
-    </div>
-  </header>
 
-  <main id="inicio" class="container">
-    <section class="hero">
+<body class="layout has-sidebar">
+  <!-- ===== SIDEBAR / TOPBAR ===== -->
+  <aside class="sidebar">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <img src="images/logo.png" alt="Logo Alicia" width="44" height="44">
       <div>
-        <h1>Mejora la calidad de vida de los tuyos</h1>
-        <p>Especializada en psicología infantil y juvenil. Acompaño a niños, padres y familias con un trato cercano y cuidadoso, para que los peques crezcan seguros y felices.</p>
-        <div class="actions">
-          <!-- 🔽 cambiado -->
-          <a class="cta" href="reservar.html">Empecemos</a>
-          <a class="btn-outline" href="#sobre-mi">Conocer más</a>
-        </div>
+        <b class="brand-title">Alicia Albendín</b>
+        <div class="brand-sub">Psicología Infantil y Familiar</div>
       </div>
-      <div class="img-blob">
-        <img class="portrait" alt="Alicia Albendín" src="images/alicia.png" loading="lazy" width="420" height="420"/>
-      </div>
-    </section>
+    </a>
 
-    <section id="sobre-mi" class="about">
-      <div>
-        <img alt="Consulta" src="images/consulta.jpg" class="about-img" loading="lazy">
-      </div>
-      <div class="about-card">
-        <h2 class="section-title">Sobre mí</h2>
-        <p class="section-sub">Soy Alicia Albendín Martínez, psicóloga colegiada Nº <b>AN12117</b> por la Universidad de Huelva.</p>
-        <ul>
-          <li>Especializada en psicología infantil y juvenil, con experiencia con niños de todas las edades.</li>
-          <li>Intervención en Dislexia, TDAH, dificultades de lectura, Discalculia, TEA, problemas conductuales y emocionales.</li>
-          <li>Mi vocación nace de mi propia historia con la lectura: hoy me dedico a minimizar esas dificultades para que vivan una infancia feliz.</li>
-        </ul>
-      </div>
-    </section>
+    <nav class="nav" aria-label="Principal">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#opiniones" class="nav-link">Opiniones</a>
+      <a href="#precios" class="nav-link">Precios</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="reservar.html" class="btn btn-accent nav-cta">Reservar cita</a>
+    </nav>
 
-    <section class="contact-band">
-      <div>
-        <h2 class="section-title">Reserva tu cita</h2>
-        <p class="section-sub">Primera sesión con precio reducido. Sin compromiso.</p>
-      </div>
-      <div class="contact-actions">
-        <!-- 🔽 cambiado -->
-        <a class="btn-ghost" href="reservar.html">Reservar</a>
-        <a class="btn-ghost" href="mailto:aliciaalbendinpsicologa@gmail.com">Email</a>
-        <a class="btn-ghost" href="tel:+34672367461">WhatsApp</a>
-        <a class="btn-ghost" href="https://t.me/aliciaalbendinpsicologa">Telegram</a>
-      </div>
-    </section>
+    <button class="menu-btn" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false">☰</button>
+  </aside>
 
-<section>
-  <h2 class="section-title">¿Te suena esto?</h2>
-  <div class="problems">
-    <div class="problem">Te cuestionas si estás ayudando de forma adecuada a tu hijo.</div>
-    <div class="problem">Te frustra ver cómo tu hijo tiene dificultades que no desaparecen.</div>
-    <div class="problem">Te entristece ver cómo tu hijo lucha con tareas que otros niños realizan fácilmente.</div>
-    <div class="problem">Te sientes desanimado cuando no sabes cómo ayudar.</div>
-    <div class="problem">Te preocupa cómo será el futuro de tu hijo si persisten las dificultades.</div>
-    <div class="problem">Te gustaría entender mejor lo que tu hijo necesita para poder acompañarle con más calma.</div>
-    <div class="problem">A veces sientes que la comunicación en casa se complica y no sabes por qué.</div>
-    <div class="problem">Quieres recuperar un ambiente familiar más tranquilo y con menos discusiones.</div>
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Menú móvil">
+    <a href="#inicio" class="nav-link" onclick="closeMobile()">Inicio</a>
+    <a href="#sobre-mi" class="nav-link" onclick="closeMobile()">Sobre mí</a>
+    <a href="#servicios" class="nav-link" onclick="closeMobile()">Servicios</a>
+    <a href="#opiniones" class="nav-link" onclick="closeMobile()">Opiniones</a>
+    <a href="#precios" class="nav-link" onclick="closeMobile()">Precios</a>
+    <a href="#faq" class="nav-link" onclick="closeMobile()">FAQ</a>
+    <a href="reservar.html" class="btn btn-accent" onclick="closeMobile()">Reservar cita</a>
   </div>
-</section>
 
+  <!-- ===== CONTENIDO ===== -->
+  <main id="inicio" class="content">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <h1 class="display">Mejora la calidad de vida de los tuyos</h1>
+        <p class="lead">Especializada en psicología infantil y juvenil. Acompaño a niños, padres y familias con un trato cercano y cuidadoso, para que los peques crezcan seguros y felices.</p>
+        <div class="actions">
+          <a class="btn btn-accent" href="reservar.html">Empecemos</a>
+          <a class="btn btn-outline" href="#sobre-mi">Conocer más</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img class="hero-img" src="images/alicia.png" alt="Alicia Albendín" width="520" height="520" loading="lazy">
+      </figure>
+    </section>
 
-    <section id="servicios" class="services">
-      <h2 class="section-title">Servicios</h2>
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section">
+      <header class="section-head">
+        <h2 class="kicker">Quién soy</h2>
+        <h3 class="title">Sobre mí</h3>
+      </header>
+
+      <div class="grid grid-2">
+        <div>
+          <img src="images/consulta.jpg" alt="Consulta" class="media-card" loading="lazy">
+        </div>
+        <article class="card">
+          <p>Soy Alicia Albendín Martínez, psicóloga colegiada Nº <b>AN12117</b> por la Universidad de Huelva.</p>
+          <ul class="list">
+            <li>Especializada en psicología infantil y juvenil, con experiencia con niños de todas las edades.</li>
+            <li>Intervención en Dislexia, TDAH, dificultades de lectura, Discalculia, TEA, problemas conductuales y emocionales.</li>
+            <li>Mi vocación nace de mi propia historia con la lectura: hoy me dedico a minimizar esas dificultades para que vivan una infancia feliz.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Banda de contacto -->
+    <section class="band">
+      <div>
+        <h3 class="band-title">Reserva tu cita</h3>
+        <p class="muted">Primera sesión con precio reducido. Sin compromiso.</p>
+      </div>
+      <nav class="band-actions">
+        <a class="btn btn-light" href="reservar.html">Reservar</a>
+        <a class="btn btn-light" href="mailto:aliciaalbendinpsicologa@gmail.com">Email</a>
+        <a class="btn btn-light" href="tel:+34672367461">WhatsApp</a>
+        <a class="btn btn-light" href="https://t.me/aliciaalbendinpsicologa">Telegram</a>
+      </nav>
+    </section>
+
+    <!-- Problemas -->
+    <section class="section">
+      <header class="section-head">
+        <h2 class="kicker">Si te resuena, podemos trabajar juntas</h2>
+        <h3 class="title">¿Te suena esto?</h3>
+      </header>
+      <div class="masonry">
+        <div class="note">Te cuestionas si estás ayudando de forma adecuada a tu hijo.</div>
+        <div class="note">Te frustra ver cómo tu hijo tiene dificultades que no desaparecen.</div>
+        <div class="note">Te entristece ver cómo tu hijo lucha con tareas que otros niños realizan fácilmente.</div>
+        <div class="note">Te sientes desanimado cuando no sabes cómo ayudar.</div>
+        <div class="note">Te preocupa cómo será el futuro de tu hijo si persisten las dificultades.</div>
+        <div class="note">Te gustaría entender mejor lo que tu hijo necesita para poder acompañarle con más calma.</div>
+        <div class="note">A veces sientes que la comunicación en casa se complica y no sabes por qué.</div>
+        <div class="note">Quieres recuperar un ambiente familiar más tranquilo y con menos discusiones.</div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section">
+      <header class="section-head">
+        <h2 class="kicker">Cómo trabajo</h2>
+        <h3 class="title">Servicios</h3>
+      </header>
 
       <article class="service">
-        <div class="txt">
-          <h3>Terapia con niños</h3>
-          <p class="section-sub">Evaluación e intervención individual para dificultades específicas de aprendizaje y conducta.</p>
+        <div class="service-text">
+          <h4>Terapia con niños</h4>
+          <p class="muted">Evaluación e intervención individual para dificultades específicas de aprendizaje y conducta.</p>
         </div>
-        <div class="img">
-          <img src="images/terapia-ninos.png" alt="Terapia con niños" loading="lazy">
-        </div>
+        <img src="images/terapia-ninos.png" alt="Terapia con niños" loading="lazy">
       </article>
 
       <article class="service">
-        <div class="txt">
-          <h3>Terapia con padres</h3>
-          <p class="section-sub">Acompañamiento para gestionar dinámicas familiares y estrategias en casa.</p>
+        <div class="service-text">
+          <h4>Terapia con padres</h4>
+          <p class="muted">Acompañamiento para gestionar dinámicas familiares y estrategias en casa.</p>
         </div>
-        <div class="img">
-          <img src="images/terapia-padres.png" alt="Terapia con padres" loading="lazy">
-        </div>
+        <img src="images/terapia-padres.png" alt="Terapia con padres" loading="lazy">
       </article>
 
       <article class="service">
-        <div class="txt">
-          <h3>Terapia familiar</h3>
-          <p class="section-sub">Sesiones con varios miembros para mejorar la comunicación y el bienestar conjunto.</p>
+        <div class="service-text">
+          <h4>Terapia familiar</h4>
+          <p class="muted">Sesiones con varios miembros para mejorar la comunicación y el bienestar conjunto.</p>
         </div>
-        <div class="img">
-          <img src="images/terapia-familiar.png" alt="Terapia familiar" loading="lazy">
-        </div>
+        <img src="images/terapia-familiar.png" alt="Terapia familiar" loading="lazy">
       </article>
     </section>
 
-    <section id="opiniones" class="testis">
-      <h2 class="section-title">Esto es lo que opinan mis pacientes</h2>
-      <div class="card"><p>“Alicia, el cambio que hemos notado con Jose es increíble...”</p></div>
-      <div class="card"><p>“Hola Alicia, quería comentarte las mejorías que estoy apreciando en Sara...”</p></div>
-      <div class="card"><p>“María estaba revolucionada; ahora está mucho más relajada y ha mejorado en la lectura.”</p></div>
+    <!-- Opiniones -->
+    <section id="opiniones" class="section">
+      <header class="section-head">
+        <h2 class="kicker">Voces reales</h2>
+        <h3 class="title">Esto es lo que opinan mis pacientes</h3>
+      </header>
+      <div class="stack">
+        <blockquote class="quote">“Alicia, el cambio que hemos notado con Jose es increíble...”</blockquote>
+        <blockquote class="quote">“Hola Alicia, quería comentarte las mejorías que estoy apreciando en Sara...”</blockquote>
+        <blockquote class="quote">“María estaba revolucionada; ahora está mucho más relajada y ha mejorado en la lectura.”</blockquote>
+      </div>
     </section>
 
-    <section id="precios" class="pricing">
-      <h2 class="section-title">Reserva tu primera cita</h2>
-      <div class="price"><h4>Sesión individual</h4><div class="amount">70€</div></div>
-      <div class="price"><h4>Primera sesión</h4><div class="amount">50€</div></div>
-      <div class="price"><h4>Bono 4 sesiones</h4><div class="amount">220€</div></div>
+    <!-- Precios -->
+    <section id="precios" class="section">
+      <header class="section-head">
+        <h2 class="kicker">Transparencia</h2>
+        <h3 class="title">Reserva tu primera cita</h3>
+      </header>
+
+      <div class="pricing">
+        <article class="price">
+          <h4>Sesión individual</h4>
+          <div class="price-amount">70€</div>
+        </article>
+        <article class="price">
+          <h4>Primera sesión</h4>
+          <div class="price-amount">50€</div>
+        </article>
+        <article class="price">
+          <h4>Bono 4 sesiones</h4>
+          <div class="price-amount">220€</div>
+        </article>
+      </div>
     </section>
 
-    <section id="faq" class="faq">
-      <h2 class="section-title">Preguntas frecuentes</h2>
-      <details><summary>¿Cómo es la primera cita?</summary><p>Primera toma de contacto para conocernos...</p></details>
-      <details><summary>¿Cuánto dura cada sesión?</summary><p>60 minutos.</p></details>
-      <details><summary>¿Qué plataforma online se usa?</summary><p>Zoom, Skype, WhatsApp, Discord o Google Meet.</p></details>
-      <details><summary>¿Cuándo debo abonar?</summary><p>Al menos 24h antes de la consulta.</p></details>
-      <details><summary>¿Servirá para mí?</summary><p>Me ajusto a cada familia y niño.</p></details>
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <header class="section-head">
+        <h2 class="kicker">Resuelvo tus dudas</h2>
+        <h3 class="title">Preguntas frecuentes</h3>
+      </header>
+
+      <details class="faq-item">
+        <summary>¿Cómo es la primera cita?</summary>
+        <p>Primera toma de contacto para conocernos...</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto dura cada sesión?</summary>
+        <p>60 minutos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué plataforma online se usa?</summary>
+        <p>Zoom, Skype, WhatsApp, Discord o Google Meet.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuándo debo abonar?</summary>
+        <p>Al menos 24h antes de la consulta.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Servirá para mí?</summary>
+        <p>Me ajusto a cada familia y niño.</p>
+      </details>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <small>© 2025 Alicia Albendín. Todos los derechos reservados.</small>
-      <a href="aviso-legal.html">Aviso legal y protección de datos</a>
-    </div>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <small>© 2025 Alicia Albendín. Todos los derechos reservados.</small>
+    <a href="aviso-legal.html">Aviso legal y protección de datos</a>
   </footer>
 
-  <!-- Popup de cookies solo informativo -->
-  <div id="cookie-backdrop" class="cookie-backdrop"></div>
-  <div id="cookie-modal" class="cookie-modal">
-    <div class="cookie-content" role="document" tabindex="-1">
+  <!-- ===== POPUP COOKIES ===== -->
+  <div id="cookie-backdrop" class="cookie-backdrop" hidden></div>
+  <div id="cookie-modal" class="cookie-modal" hidden>
+    <div class="cookie-card" role="document" tabindex="-1">
       <h3>Tu privacidad</h3>
-      <p>
-        Este sitio utiliza cookies esenciales para su funcionamiento y puede incluir cookies de terceros.  
-        Para más información, consulta el <a href="aviso-legal.html#cookies">aviso legal</a>.
-      </p>
+      <p>Este sitio utiliza cookies esenciales para su funcionamiento y puede incluir cookies de terceros. Para más información, consulta el <a href="aviso-legal.html#cookies">aviso legal</a>.</p>
       <div class="cookie-actions">
-        <button id="cookie-accept" class="btn" type="button">Aceptar</button>
+        <button id="cookie-accept" class="btn btn-accent" type="button">Aceptar</button>
       </div>
     </div>
   </div>
 
   <script>
-    function toggleMenu(){
-      const mm = document.querySelector('.mobile-menu');
-      mm.style.display = (mm.style.display === 'block') ? 'none' : 'block';
-    }
+    const menuBtn = document.querySelector('.menu-btn');
+    const mobile = document.getElementById('mobileMenu');
+    function closeMobile(){ mobile.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }
+    menuBtn.addEventListener('click', ()=>{
+      const isOpen = mobile.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    mobile.addEventListener('click', (e)=>{ if(e.target === mobile) closeMobile(); });
 
-    document.addEventListener('DOMContentLoaded', function(){
+    // Cookie "fachada" solo en home
+    document.addEventListener('DOMContentLoaded', ()=>{
       const path = window.location.pathname;
-      const isHome = path.endsWith('/') || path.endsWith('/index.html');
+      const isHome = path.endsWith('/') || path.endsWith('/index.html') || !path.includes('.html');
       const modal = document.getElementById('cookie-modal');
       const backdrop = document.getElementById('cookie-backdrop');
       const btn = document.getElementById('cookie-accept');
-      if (!isHome) {
-        modal.remove();
-        backdrop.remove();
-        return;
-      }
-      function openModal(){
-        modal.style.display = 'grid';
-        backdrop.style.display = 'block';
-        document.body.classList.add('no-scroll');
-      }
-      function closeModal(){
-        modal.remove();
-        backdrop.remove();
-        document.body.classList.remove('no-scroll');
-      }
-      openModal();
-      btn.addEventListener('click', closeModal);
-      window.addEventListener('keydown', (e)=>{
-        if (e.key === 'Escape') closeModal();
-      });
+      if(!isHome){ modal.remove(); backdrop.remove(); return; }
+      const open = ()=>{ modal.hidden=false; backdrop.hidden=false; document.body.classList.add('no-scroll'); };
+      const close = ()=>{ modal.remove(); backdrop.remove(); document.body.classList.remove('no-scroll'); };
+      open();
+      btn.addEventListener('click', close);
+      window.addEventListener('keydown', e=>{ if(e.key==='Escape') close(); });
     });
   </script>
 </body>
