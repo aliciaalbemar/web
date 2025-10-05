@@ -51,7 +51,8 @@
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
-      <a class="cta" href="#precios">Reservar cita</a>
+      <!-- 🔽 cambiado -->
+      <a class="cta" href="reservar.html">Reservar cita</a>
       <button class="menu-btn" aria-label="Abrir menú" onclick="toggleMenu()">☰</button>
     </div>
     <div class="mobile-menu" role="dialog" aria-label="Menú móvil">
@@ -61,7 +62,8 @@
       <a href="#opiniones" onclick="toggleMenu()">Opiniones</a>
       <a href="#precios" onclick="toggleMenu()">Precios</a>
       <a href="#faq" onclick="toggleMenu()">FAQ</a>
-      <a href="#precios" class="cta" style="margin:12px">Reservar cita</a>
+      <!-- 🔽 cambiado -->
+      <a href="reservar.html" class="cta" style="margin:12px" onclick="toggleMenu()">Reservar cita</a>
     </div>
   </header>
 
@@ -71,7 +73,8 @@
         <h1>Mejora la calidad de vida de los tuyos</h1>
         <p>Especializada en psicología infantil y juvenil. Acompaño a niños, padres y familias con un trato cercano y cuidadoso, para que los peques crezcan seguros y felices.</p>
         <div class="actions">
-          <a class="cta" href="#precios">Empecemos</a>
+          <!-- 🔽 cambiado -->
+          <a class="cta" href="reservar.html">Empecemos</a>
           <a class="btn-outline" href="#sobre-mi">Conocer más</a>
         </div>
       </div>
@@ -101,7 +104,8 @@
         <p class="section-sub">Primera sesión con precio reducido. Sin compromiso.</p>
       </div>
       <div class="contact-actions">
-        <a class="btn-ghost" href="#precios">Reservar</a>
+        <!-- 🔽 cambiado -->
+        <a class="btn-ghost" href="reservar.html">Reservar</a>
         <a class="btn-ghost" href="mailto:aliciaalbendinpsicologa@gmail.com">Email</a>
         <a class="btn-ghost" href="tel:+34672367461">WhatsApp</a>
         <a class="btn-ghost" href="https://t.me/aliciaalbendinpsicologa">Telegram</a>
@@ -204,13 +208,11 @@
   </div>
 
   <script>
-    // Menú móvil
     function toggleMenu(){
       const mm = document.querySelector('.mobile-menu');
       mm.style.display = (mm.style.display === 'block') ? 'none' : 'block';
     }
 
-    // Mostrar popup solo en la home (index.html)
     document.addEventListener('DOMContentLoaded', function(){
       const path = window.location.pathname;
       const isHome = path.endsWith('/') || path.endsWith('/index.html');
